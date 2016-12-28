@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+<div>
+<center><img src="https://images.cooltext.com/4688380.png" width="628" height="130" alt="My Address Book"></center>
+<div>
+  <div>
+  <div>
+ 
+  <div>
+  <h2><center>Login Form</center></h2>
+  <form target="_blank" onsubmit="try {return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);} catch (e) {return false;}">
+    <div>
+      <label>Email/UserName:</label>
+      <input type="email">
+    </div>
+    <div>
+      <label>Password:</label>
+      <input type="password">
+    </div>
+    <div>
+      <label><input type="checkbox"> Remember me </label><a href="#0.4_"></a>
+    </div>
+    <button type="submit">Log in</button>
+   </form>
+   </div>  
+  </div>
+</div>
+</div>
+
+</div>
+
+</body></html>
