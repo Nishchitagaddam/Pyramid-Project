@@ -1,9 +1,14 @@
+
 from pyramid.view import view_config
 
 
-@view_config(route_name='home', renderer='templates/mytemplate.pt')
-def my_view(request):
-    return {'project': 'scaffolds'}
+
+@view_config(route_name='home', renderer='home.pt')
+def home(request):
+    return {'name': 'Home '}
 
 
 
+@view_config(route_name='hello', renderer='home.pt')
+def hello(request):
+    return {'name': 'Hello '}
