@@ -41,20 +41,6 @@ setup(name='whee',
       extras_require={
           'testing': tests_require,
       },
-      
-         #...
-         install_requires=[
-             'pyramid_mako',
-             'pyramid',
-             #...
-         ],
-         #...
-         install_requires=[
-             'pyramid_chameleon',
-             'pyramid',
-             #...
-          ],
-       
       install_requires=requires,
       entry_points="""\
       [paste.app_factory]

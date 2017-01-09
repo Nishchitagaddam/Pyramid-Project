@@ -1,47 +1,29 @@
-
 import unittest
 
 from pyramid import testing
 
 
-class TutorialViewTests(unittest.TestCase):
+class ViewTests(unittest.TestCase):
     def setUp(self):
         self.config = testing.setUp()
 
     def tearDown(self):
         testing.tearDown()
 
-    def test_home(self):
-        from .views import home
-
+    def test_my_view(self):
+        from .views import my_view
         request = testing.DummyRequest()
-        response = home(request)
-        # Our view now returns data
-        self.assertEqual('Home ', response['name'])
-
-    def test_hello(self):
-        from .views import hello
-
-        request = testing.DummyRequest()
-        response = hello(request)
-        # Our view now returns data
-        self.assertEqual('Hello ', response['name'])
+        info = my_view(request)
+        self.assertEqual(info['project'], 'whee')
 
 
-class TutorialFunctionalTests(unittest.TestCase):
+class FunctionalTests(unittest.TestCase):
     def setUp(self):
-        from tutorial import main
+        from whee import main
         app = main({})
         from webtest import TestApp
-
         self.testapp = TestApp(app)
 
-    def test_home(self):
+    def test_root(self):
         res = self.testapp.get('/', status=200)
-        self.assertIn(b'<h1>Hi Home ', res.body)
-
-    def test_hello(self):
-        res = self.testapp.get('/howdy', status=200)
-        self.assertIn(b'<h1>Hi Hello ', res.body)
-
-
+        self.assertTrue(b'Pyramid' in res.body)
